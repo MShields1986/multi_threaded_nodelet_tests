@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    
+    <node pkg="nodelet" type="nodelet" name="nodelet_mt_test_nodelet_manager" args="manager" output="screen" >
+        <param name="num_worker_threads" value="3" />
+    </node>
+
+    <node pkg="nodelet" type="nodelet" name="nodelet_test_nodelet" 
+          args="load nodelet_test/nodelet_mt_test_nodelet nodelet_mt_test_nodelet_manager">
+    </node>
+
+</launch>
