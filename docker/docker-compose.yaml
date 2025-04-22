@@ -1,0 +1,20 @@
+name: nodelet_test
+
+services:
+  nodelet_test:
+    environment:
+      - nodelet_test
+      - DISPLAY
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      network: host
+    network_mode: host
+    ipc: host
+    volumes:
+      - /dev:/dev
+      - $XAUTHORITY:/root/.Xauthority
+      - ../src:/ros2_ws/src
+      - ../data:/data
+    # command: sleep infinity
+    command: roslaunch nodelet_test init.launch

@@ -1,0 +1,11 @@
+<library path="lib/libnodelet_test_nodelets">
+
+  <class name="nodelet_test/nodelet_mt_test_nodelet"
+     type="nodelet_mt_test_namespace::MtTestNodelet"
+     base_class_type="nodelet::Nodelet">
+    <description>
+      Nodelet to test MT.
+    </description>
+  </class>
+
+</library>
